@@ -21,7 +21,7 @@ export default function BootstrapProject(){
         <h1 className="m-0 flex-grow-1 text-center heading-playfair">Bootstrap Project Samples</h1>
 
         <div className="ms-2">
-          <a className="btn btn-outline-primary" href="https://github.com/USERNAME/REPO/tree/main/bootstrap-projects" target="_blank" rel="noreferrer">View on GitHub</a>
+          <a className="btn btn-outline-primary" href="https://github.com/fathimaniba112/Bootstrap" target="_blank" rel="noreferrer">View on GitHub</a>
         </div>
       </div>
 

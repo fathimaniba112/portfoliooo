@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { FaHtml5,FaNodeJs, FaCss3Alt, FaBootstrap, FaJs, FaReact, FaPython, FaGitAlt, FaGithub } from "react-icons/fa";
+import { SiDjango,SiExpress, SiMongodb, SiMysql } from "react-icons/si";
 
 export default function Home(){
   useEffect(() => {
@@ -28,7 +30,7 @@ export default function Home(){
     <>
       <nav className="navbar navbar-expand-lg py-3">
         <div className="container-fluid">
-          <a className="navbar-brand fw-bold" href="#home">FN</a>
+          <a className="navbar-brand fw-bold" href="#home">NIBA</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -39,6 +41,7 @@ export default function Home(){
               <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
               <li className="nav-item"><a className="nav-link" href="#expertise">Expertise</a></li>
               <li className="nav-item"><a className="nav-link" href="#projects">Projects</a></li>
+               <li className="nav-item"><a className="nav-link" href="#skills">Skills</a></li>
               <li className="nav-item"><a className="nav-link" href="#certificate">Certificate</a></li>
               <li className="nav-item"><a className="nav-link" href="#work">Work</a></li>
             </ul>
@@ -78,40 +81,50 @@ export default function Home(){
         </ul>
       </div>
 
-      <section id="about" className="about-me py-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 about-text">
-              <h2 className="display-4 text-center">About Me</h2>
-              <div className="underline"></div>
-              <div className="d-flex justify-content-start align-items-center about-details">
-                <h3>Get to know me!</h3>
-              </div>
+   <section id="about" className="about-me py-5">
+  <div className="container">
+    <div className="row justify-content-center text-center">
+      <div className="col-md-10">
+        <h2 className="display-4" style={{marginBottom: '0'}}>About Me</h2>
+        <div className="underline mx-auto"></div>
 
-              <p>I'm a <strong>Frontend ,Backend Web Developer</strong> building and managing the  of Websites and Web Applications that lead to the success of the overall product. Check out some of my work in the <a href="#projects">Projects</a> section.</p>
-              <p>I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</p>
-              <button className="d-flex justify-content-start align-items-center contact-btn">Contact</button>
-            </div>
+ 
+        {/* <p className="mt-3">
+          I'm a <strong>Frontend & Backend Web Developer</strong> building and managing
+          Websites and Web Applications that contribute to successful digital products.
+          Check out some of my work in the <a href="#projects">Projects</a> section.
+        </p>
 
-            <div className="col-md-4 skills-section">
-              <h3 className="text-center">My Skills</h3>
-              <div className="d-flex flex-wrap gap-2 justify-content-center">
-                <button className="btn btn-light btn-sm">HTML</button>
-                <button className="btn btn-light btn-sm">CSS</button>
-                <button className="btn btn-light btn-sm">JavaScript</button>
-                <button className="btn btn-light btn-sm">Bootstrap</button>
-                <button className="btn btn-light btn-sm">Python</button>
-                <button className="btn btn-light btn-sm">Django</button>
-                <button className="btn btn-light btn-sm">Mysql</button>
-                <button className="btn btn-light btn-sm">MogoDB</button>
-                <button className="btn btn-light btn-sm">REACT JS</button>
-                <button className="btn btn-light btn-sm">EXpress JS</button>
-                <button className="btn btn-light btn-sm">Node JS</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        <p>
+          I'm open to job opportunities where I can contribute, learn and grow. 
+          If you have a good opportunity that matches my skills and experience, 
+          feel free to contact me.
+        </p> */}
+ <p className="mt-3 text-start" style={{ lineHeight: "1.8", fontSize: "1.06rem" }}>
+  I’m a <strong>Full-Stack Web Developer</strong> with a strong focus on building fast, responsive, and user-friendly websites and web applications. 
+  I love transforming ideas into real, functional products—whether it’s a clean, elegant frontend or a robust backend that handles complex logic smoothly.
+  <br /><br />
+
+  <strong>My development approach is centered around:</strong>
+  <br />
+  <span className="d-block mt-2">• <strong>Performance:</strong> writing efficient, optimized code.</span>
+  <span className="d-block">• <strong>Scalability:</strong> building systems that grow with user needs.</span>
+  <span className="d-block">• <strong>User Experience:</strong> creating intuitive and engaging interfaces.</span>
+  <span className="d-block">• <strong>Clean Architecture:</strong> ensuring maintainable and expandable projects.</span>
+  <br />
+
+  I’ve worked on various projects that blend creativity with technical problem-solving.  
+  You can explore some of them in the <a href="#projects" className="fw-bold">Projects</a> section of my portfolio.
+  <br /><br />
+
+  I’m always open to opportunities where I can collaborate, learn, and make a meaningful impact. 
+  If you're looking for someone who enjoys building digital experiences and loves tackling challenges, 
+  let’s connect—I’d be excited to discuss how I can contribute to your team or idea.
+</p>
+       </div>
+    </div>
+  </div>
+</section>
 
       <section id="expertise" className="container py-5 text-center">
         <h2 className="mb-5">My Expertise</h2>
@@ -206,6 +219,45 @@ export default function Home(){
           </div>
         </div>
       </section>
+ {/* ===== Skills Section ===== */}
+<section className="py-5" id="skills" style={{ backgroundColor: "#2F5233" }}>
+        <div className="container">
+          <h2 className="text-center mb-4 fw-bold">My Skills</h2>
+          <p className="text-center mb-5 text-muted">
+            Technologies & languages I work with
+          </p>
+
+          <div className="row g-4 justify-content-center">
+
+            {/* Icons List */}
+            {[
+              { icon: <FaHtml5 size={60} color="#E44D26" />, label: "HTML" },
+              { icon: <FaCss3Alt size={60} color="#1572B6" />, label: "CSS" },
+              { icon: <FaBootstrap size={60} color="#7952B3" />, label: "Bootstrap" },
+              { icon: <FaJs size={60} color="#F7DF1E" />, label: "JavaScript" },
+              { icon: <FaReact size={60} color="#61DAFB" />, label: "React" },
+              { icon: <FaPython size={60} color="#3776AB" />, label: "Python" },
+              { icon: <SiDjango size={60} color="#092E20" />, label: "Django" },
+              { icon: <SiMysql size={60} color="#00618A" />, label: "MySQL" },
+              { icon: <SiMongodb size={60} color="#47A248" />, label: "MongoDB" },
+{ icon: <FaNodeJs size={60} color="#539E43" />, label: "Node.js" },
+{ icon: <SiExpress size={60} color="#ffffff" />, label: "Express.js" },
+              { icon: <FaGithub size={60} />, label: "GitHub" },
+            ].map((skill, index) => (
+              <div key={index} className="col-4 col-md-3 col-lg-2 text-center">
+<div
+  className="p-3 shadow-sm rounded"
+  style={{ backgroundColor: "#2F5233", border: "1px solid #3e6b45" }}
+>
+                  {skill.icon}
+                  <p className="mt-2 fw-semibold">{skill.label}</p>
+                </div>
+              </div>
+            ))}
+
+          </div>
+        </div>
+      </section>
 
       <section id="work" className="featured-section py-5 text-center">
         <div className="container">
@@ -253,8 +305,8 @@ export default function Home(){
             <div className="col-md-4">
               <Link to="/python" className="text-decoration-none">
                 <div className="work-card p-3">
-                  <img src="/img/python.png" alt="Python" />
-                  <div className="work-title"><span>Python / Django</span><span className="arrow-icon">↗</span></div>
+                  <img src="/img/react.webp" alt="Python" />
+                  <div className="work-title"><span>React</span><span className="arrow-icon">↗</span></div>
                 </div>
               </Link>
             </div>
